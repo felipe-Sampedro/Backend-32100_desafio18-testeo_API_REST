@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dbConfig = require('../../config/db.config');
-const envConfig = require('../../../env.config');
+const envConfig = require('../../config/env.config');
 const { HttpError, HTTP_STATUS } = require('../../utils/api.utils');
 
 class MongoContainer {

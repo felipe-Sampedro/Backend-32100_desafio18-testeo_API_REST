@@ -1,4 +1,4 @@
-const envConfig = require('../../env.config');
+const envConfig = require('./env.config');
 
 module.exports = { 
   mongodb: {
