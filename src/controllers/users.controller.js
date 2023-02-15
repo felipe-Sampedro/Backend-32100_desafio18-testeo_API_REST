@@ -3,7 +3,7 @@ const { successResponse, HTTP_STATUS } = require("../utils/api.utils");
 
 const usersApi = new UsersApi();
 
-const usersDao = new UsersDao();
+// const usersDao = new UsersDao();
 
 class UsersControllers {
   getUsers = async (req, res, next) => {

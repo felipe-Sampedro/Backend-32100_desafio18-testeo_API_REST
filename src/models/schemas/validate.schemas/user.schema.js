@@ -7,7 +7,7 @@ class UserSchema{
     phone: yup.number().required(),    
     email: yup.string().email(),
     password: yup.string().required(),
-    confirm_password: yup.string().oneOf([Yup.ref('password'), null]).required()
+    confirm_password: yup.string().oneOf([yup.ref('password'), null]).required()
   })
 
   constructor(user) {
