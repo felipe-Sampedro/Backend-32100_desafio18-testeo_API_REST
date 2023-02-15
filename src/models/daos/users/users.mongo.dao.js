@@ -28,24 +28,7 @@ class UserMongoDao extends MongoContainer {
           }
           throw new HttpError(HTTP_STATUS.INTERNAL_ERROR, error.message, error);
         }
-    
       };
-    
-      async getById(id) {
-        try {
-          const document = await this.model
-            .findById(id, { __v: 0 }).lean();
-          if (!document) {
-            const errorMessage = `Resource with id ${id} does not exist in our records`;
-            throw new HttpError(HTTP_STATUS.NOT_FOUND, errorMessage);
-          } else {
-            return document;
-          }
-        }
-        catch(error) {
-          throw new HttpError(HTTP_STATUS.INTERNAL_ERROR, error.message, error);
-        }
-      }
     
       async getByEmail(email) {
         try {
